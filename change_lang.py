@@ -10,10 +10,12 @@ s = str(temp)
 
 for i in temp:
     if Lang1.find(i) == -1:
-        n = Lang2.find(i)
+        n = Lang2.index(i)
+        s = s.replace(i,Lang1[n])
     else:
         n = Lang1.find(i)
+        s = s.replace(i,Lang2[n])
     
     
-    s = s.replace(i,Lang2[n])
+    
 pyperclip.copy(s)
